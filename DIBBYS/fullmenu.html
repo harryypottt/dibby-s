@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dibby's Restaurant | Full Menu</title>
+  <link rel="stylesheet" href="fullmenu.css">
+</head>
+
+<body class="page-transition">
+
+    <header class="header">
+        <div class="header-container">
+            <img src="/DIBBYS/images/nobg-logo.png" class="logo">
+
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="Index.html" class="nav-link ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="fullmenu.html" class="nav-link active">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Feedback</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Desktop Cart -->
+            <div class="btn-cart nav-cart-desktop">
+                <img src="/DIBBYS/images/Cart-Icon.png" alt="Cart">
+                <span class="cart-badge" id="cart-count">0</span>
+            </div>
+
+            <!-- Mobile Cart -->
+            <div class="cart-mobile">
+                <div class="btn-cart">
+                    <img src="/DIBBYS/images/Cart-Icon.png" alt="Cart">
+                    <span class="cart-badge" id="cart-count-mobile">0</span>
+                </div>
+            </div>
+
+            <!-- Cart Modal -->
+            <div id="cart-modal" class="cart-modal" style="display:none;">
+                <div class="cart-header">
+                  <h3>Your Cart</h3>
+                  <div class="cart-actions">
+                      <button id="edit-cart">Edit</button>
+                     <button id="remove-cart" style="display:none;">Remove</button>
+                  </div>
+                </div>
+                <ul id="cart-items"></ul>
+                <div class="cart-footer">
+                      <span>Total: ₱<span id="cart-total">0</span></span>
+                      <button id="checkout-cart">Checkout</button>
+                      <button id="close-cart">Close</button>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+  <main>
+    <h2>Our Full Menu</h2>
+    <p>Browse all our delicious offerings below. Use the buttons to filter by category!</p>
+
+
+    <!--filter buttons-->
+    <div class="filter-buttons">
+        <button class="active" onclick="filterMenu('all')">All</button>
+        <button onclick="filterMenu('chicken')">Chicken</button>
+        <button onclick="filterMenu('silog')">Silog</button>
+        <button onclick="filterMenu('sizzling')">Sizzling</button>
+        <button onclick="filterMenu('burger')">Burger & Fries</button>
+        <button onclick="filterMenu('combo-meals')">Combo Meals</button>
+        <button onclick="filterMenu('drinks')">Drinks & Frappes</button>
+        <button onclick="filterMenu('bilao')">Special Bilao Wings</button>   
+        <button onclick="filterMenu('special-pancit')">Special Pancit</button>
+    </div>
+
+    <!--Full menu-->
+    <div class="menu-container">
+
+        <!-- Chicken -->
+        <div class="menu-item chicken">
+            <img src="images/original.jpg" alt="Original Wings">
+            <h3>Original Wings</h3>
+            <p>Classic chicken wings, tender, juicy, and perfectly seasoned.</p>
+            <div class="price-actions">
+                 <span>₱309 <i>(6 pieces)</i></span>
+            </div>
+            <div class="purchasing">
+                 <button class="add-cart">Add to Cart</button>
+                 <button class="buy">Buy</button>
+            </div>
+        </div>
+
+        <div class="menu-item chicken">
+            <img src="images/don-alfredo.jpg" alt="Don Alfredo Wings">
+            <h3>Don Alfredo Wings</h3>
+            <p>Creamy garlic parmesan wings with an Italian twist.</p>
+            <div class="price-actions">
+                 <span>₱309 <i>(6 pieces)</i></span>
+            </div>
+            <div class="purchasing">
+                 <button class="add-cart">Add to Cart</button>
+                 <button class="buy">Buy</button>
+            </div>
+        </div>
+
+        <div class="menu-item chicken">
+            <img src="images/honey-sriracha.jpg" alt="Honey Sriracha Wings">
+            <h3>Honey Sriracha Wings</h3>
+            <p>Sweet and spicy wings glazed with honey and sriracha.</p>
+            <div class="price-actions">
+                 <span>₱309 <i>(6pieces)</i></span>
+            </div>
+            <div class="purchasing">
+                 <button class="add-cart">Add to Cart</button>
+                 <button class="buy">Buy</button>
+            </div>
+        </div>
+
+        <div class="menu-item chicken">
+            <img src="images/Patis-glazed.jpg" alt="Patiz Glazed Wings">
+            <h3>Patiz Glazed Wings</h3>
+            <p>Savory Filipino-style wings glazed with patis and spices.</p>
+            <div class="price-actions">
+                 <span>₱309 <i>(6pieces)</i></span>
+            </div>
+            <div class="purchasing">
+                 <button class="add-cart">Add to Cart</button>
+                 <button class="buy">Buy</button>
+            </div>
+        </div>  
+
+        <div class="menu-item chicken">
+            <img src="images/Garlic-parmesan.jpg" alt="Garlic Parmesan">
+            <h3>Garlic Parmesan</h3>
+            <p>Creamy garlic parmesan wings with an Italian twist.</p>
+            <div class="price-actions">
+                 <span>₱309 <i>(6pieces)</i></span>
+            </div>
+            <div class="purchasing">
+                 <button class="add-cart">Add to Cart</button>
+                 <button class="buy">Buy</button>
+            </div>
+        </div>
+
+        <div class="menu-item chicken">
+            <img src="images/butter-bee.jpg" alt="Butter Bee">
+            <h3>Butter Bee  </h3>
+            <p>Tender and juicy chicken wings tossed in a rich, buttery sauce with a hint of sweetness, perfect in every bite.</p>
+          <div class="price-actions">
+                 <span>₱309 <i>(6pieces)</i></span>
+            </div>
+            <div class="purchasing">
+                 <button class="add-cart">Add to Cart</button>
+                 <button class="buy">Buy</button>
+            </div>
+        </div> 
+
+        <div class="menu-item chicken">
+            <img src="images/lemon-pepper.jpg" alt="Lemon Pepper">
+            <h3>Lemon Pepper</h3>
+            <p>Crispy chicken wings coated in a zesty blend of lemon and cracked black pepper for a bold, classic flavor.</p>
+           <div class="price-actions">
+                 <span>₱309 <i>(6pieces)</i></span>
+            </div>
+            <div class="purchasing">
+                 <button class="add-cart">Add to Cart</button>
+                 <button class="buy">Buy</button>
+            </div>
+        </div>
+
+        <div class="menu-item chicken">
+            <img src="images/salted egg.jpg" alt="Salted Egg">
+            <h3>Salted Egg</h3>
+            <p>Crispy chicken wings tossed in a rich, creamy salted egg sauce with a perfect balance of savory and sweet flavors.</p>
+            <div class="price-actions">
+                 <span>₱309 <i>(6pieces)</i></span>
+            </div>
+            <div class="purchasing">
+                 <button class="add-cart">Add to Cart</button>
+                 <button class="buy">Buy</button>
+            </div>
+        </div>
+
+        <div class="menu-item chicken">
+            <img src="images/soy-garlic.jpg" alt="Soy Garlic">
+            <h3>Soy Garlic</h3>
+            <p>Crispy chicken wings glazed in a flavorful blend of sweet soy sauce and aromatic garlic for that classic Asian-inspired taste.</p>
+           <div class="price-actions">
+                 <span>₱309 <i>(6pieces)</i></span>
+            </div>
+            <div class="purchasing">
+                 <button class="add-cart">Add to Cart</button>
+                 <button class="buy">Buy</button>
+            </div>
+        </div>
+
+        <div class="menu-item chicken">
+            <img src="images/spicy-korean.jpg" alt="Spicy korean">
+            <h3>Spicy Korean</h3>
+            <p>Crispy chicken wings glazed in a flavorful blend of sweet soy sauce and aromatic garlic for that classic Asian-inspired taste.</p>
+           <div class="price-actions">
+                 <span>₱309 <i>(6pieces)</i></span>
+            </div>
+            <div class="purchasing">
+                 <button class="add-cart">Add to Cart</button>
+                 <button class="buy">Buy</button>
+            </div>
+        </div>
+        
+        <!-- Silog -->
+        <div class="menu-item silog">
+          <img src="images/tapsilog.jpg" alt="Tapsilog">
+          <h3>Tapsilog</h3>
+          <p>Classic Filipino breakfast meal made of beef tapa, garlic fried rice, and a fried egg.</p>
+          <div class="price-actions">
+                <span>₱149</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item silog">
+          <img src="images/shangsilog.jpg" alt="Shangsilog">
+          <h3>Shangsilog</h3>
+          <p>A silog meal featuring crispy Shanghai rolls paired with garlic fried rice and a fried egg.</p>
+          <div class="price-actions">
+                <span>₱149</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item silog">
+          <img src="images/tocilog.jpg" alt="Tocilog">
+          <h3>Tocilog</h3>
+          <p>A sweet and savory Filipino favorite with tocino, garlic fried rice, and a fried egg.</p>
+          <div class="price-actions">
+                <span>₱149</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item silog">
+          <img src="images/bangsilog.jpg" alt="Bangsilog">
+          <h3>Bangsilog</h3>
+          <p>A traditional combo of fried bangus (milkfish), garlic fried rice, and a fried egg.</p>
+          <div class="price-actions">
+                <span>₱149</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <!-- Sizzling -->
+        <div class="menu-item sizzling">
+          <img src="" alt="Budget-sisig">
+          <h3>Budget Sisig</h3>
+          <p>Classic Filipino breakfast meal made of beef tapa, garlic fried rice, and a fried egg.</p>
+          <div class="price-actions">
+                <span>₱179</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item sizzling">
+          <img src="" alt="Burger-steak">
+          <h3>Burger Steak</h3>
+          <p>Classic Filipino breakfast meal made of beef tapa, garlic fried rice, and a fried egg.</p>
+          <div class="price-actions">
+                <span>₱179</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item sizzling">
+          <img src="" alt="Signiture-sizzling">
+          <h3>Signiture Sizzling Sisig</h3>
+          <p>Classic Filipino breakfast meal made of beef tapa, garlic fried rice, and a fried egg.</p>
+          <div class="price-actions">
+                <span>₱209</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item sizzling">
+          <img src="" alt="B1t1-sisig">
+          <h3>Buy 1, Take 1 Sisig</h3>
+          <p>Classic Filipino breakfast meal made of beef tapa, garlic fried rice, and a fried egg.</p>
+          <div class="price-actions">
+                <span>₱399</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <!-- Burger -->
+        <div class="menu-item burger">
+          <img src="images/classic-burger.jpg" alt="Burger Ala Carte">
+          <h3>Burger Ala Carte</h3>
+          <p>Juicy beef patty with cheese, lettuce, and our special sauce.</p>
+          <div class="price-actions">
+                <span>₱99</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item burger">
+          <img src="images/spicy-burger.jpg" alt="Burger Fries">
+          <h3>Burger Fries</h3>
+          <p>A classic combo of a juicy burger served with crispy golden fries.</p>
+          <div class="price-actions">
+                <span>₱149</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item burger">
+          <img src="images/spicy-burger.jpg" alt="Burger Fries">
+          <h3>Burger, Fries & Drinks</h3>
+          <p>A satisfying meal featuring a delicious burger, golden fries, and a refreshing drink.</p>
+          <div class="price-actions">
+                <span>₱199</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <!-- Combo Meals-->
+        <div class="menu-item combo-meals">
+          <img src="" alt="DB1">
+          <h3>DB1</h3>
+          <p>2 peaces of Dibby's Wings and  1 Rice.</p>
+          <div class="price-actions">
+                <span>₱149</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item combo-meals">
+          <img src="" alt="DB-Solo">
+          <h3>DB Solo</h3>
+          <p>2 peaces Wings, 1 Rice, Fries, Ice Tea.</p>
+          <div class="price-actions">
+                <span>₱199</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item combo-meals">
+          <img src="" alt="DB2">
+          <h3>DB2</h3>
+          <p>2 peaces Wings, 1 Rice, Pancit Canton</p>
+          <div class="price-actions">
+                <span>₱209</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item combo-meals">
+          <img src="" alt="DB3">
+          <h3>DB3</h3>
+          <p>3 peaces Wings, 2 Rice, Pancit Canton.</p>
+          <div class="price-actions">
+                <span>₱379</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item combo-meals">
+          <img src="" alt="DB4">
+          <h3>DB4</h3>
+          <p>1 Special Sisig, 4 Shanghai Rolls, 2 Rice, Pancit Canton </p>
+          <div class="price-actions">
+                <span>₱599</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <!-- Drinks & Frappes -->
+        <div class="menu-item drinks">
+          <img src="" alt="Okinawa">
+          <h3>Okinawa Milktea</h3>
+          <p>A smooth and velvety milk tea with the deep, sweet flavor of caramelized brown sugar.</p>
+          <div class="price-actions">
+               <span>Small - ₱49 <br>Medium - ₱59 <br>Large - ₱69 </span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item drinks">
+          <img src="" alt="Darkchoco">
+          <h3>Dark Choco Milktea</h3>
+          <p>A bold and indulgent blend of deep chocolate flavor and smooth milk tea.</p>
+          <div class="price-actions">
+               <span>Small - ₱49 <br>Medium - ₱59 <br>Large - ₱69 </span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item drinks">
+          <img src="" alt="Wintermelon">
+          <h3>Wintermelon</h3>
+          <p>A light, refreshing milk tea with a sweet and mellow wintermelon taste.</p>
+          <div class="price-actions">
+               <span>Small - ₱49 <br>Medium - ₱59 <br>Large - ₱69 </span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item drinks">
+          <img src="" alt="Cookies & Cream">
+          <h3>Cookies & Cream</h3>
+          <p>Buy 1 Take 1 <br>A smooth, dessert-like frappe loaded with crushed cookies and creamy goodness.</p>
+          <div class="price-actions">
+                <span>Medium - ₱175 <br>Large - ₱215 </span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item drinks">
+          <img src="" alt="Dark-mocha">
+          <h3>Dark Mocha</h3>
+          <p>Buy 1 Take 1 <br>A bold mix of rich chocolate and strong coffee for a deep, satisfying flavor.</p>
+          <div class="price-actions">
+                <span>Medium - ₱175 <br>Large - ₱215 </span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item drinks">
+          <img src="" alt="Coffee-vanilla">
+          <h3>Coffee Vanilla</h3>
+          <p>Buy 1 Take 1 <br>A light and refreshing blend of classic coffee and smooth vanilla.</p>
+          <div class="price-actions">
+                <span>Medium - ₱175 <br>Large - ₱215 </span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <!-- Bilao -->
+        <div class="menu-item bilao">
+          <img src="images/Bilao-1.jpg" alt="bilao-1">
+          <h3>Bilao 1</h3>
+          <p> Enjoy 24 pieces, any 2 flavors, plus a free Garlic Ranch dip for each flavor.</p>
+          <div class="price-actions">
+                <span>₱649</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+      
+        <div class="menu-item bilao">
+          <img src="images/Bilao-2.jpg" alt="bilao-2">
+          <h3>Bilao 2</h3>
+          <p> Enjoy 36 pieces, any 3 flavors, plus a free Garlic Ranch dip for each flavor.</p>
+          <div class="price-actions">
+                <span>₱949</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+        
+        <div class="menu-item bilao">
+          <img src="images/Bilao-3.jpg" alt="bilao-3">
+          <h3>Bilao 3</h3>
+          <p> Enjoy 48 pieces, any 4 flavors, plus a free Garlic Ranch dip for each flavor.</p>
+          <div class="price-actions">
+                <span>₱1,149</span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <!-- Special Pancit -->
+        <div class="menu-item special-pancit">
+          <img src="" alt="Pancit-Bihon">
+          <h3>Special Pancit Bihon</h3>
+          <p>A flavorful stir-fried rice noodle dish loaded with vegetables, tender meat, and a savory sauce, perfect for sharing and celebrations.</p>
+          <div class="price-actions">
+                <span>Small - ₱99 <br>Big - ₱239 </span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+        <div class="menu-item special-pancit">
+          <img src="" alt="Pancit-Canton">
+          <h3>Special Pancit Canton</h3>
+          <p>A hearty stir-fried egg noodle dish with a mix of vegetables, savory meats, and rich, flavorful sauce, ideal for any occasio.</p>
+          <div class="price-actions">
+                <span>Small - ₱109 <br>Big - ₱249 </span>
+          </div>
+          <div class="purchasing">
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy">Buy</button>
+          </div>
+        </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dibby's Restaurant. All Rights Reserved.</p>
+  </footer>
+
+
+  <script src="fullmenu.js"></script>
+
+<script>
+const cart = [];
+let editMode = false;
+
+const cartCount = document.getElementById('cart-count');
+const cartModal = document.getElementById('cart-modal');
+const cartItemsList = document.getElementById('cart-items');
+const btnCloseCart = document.getElementById('close-cart');
+const btnEditCart = document.getElementById('edit-cart');
+const btnRemoveCart = document.getElementById('remove-cart');
+const btnCheckout = document.getElementById('checkout-cart');
+
+const addCartButtons = document.querySelectorAll('.add-cart');
+
+// NEW: Select all cart buttons (desktop + mobile)
+const allCartBtns = document.querySelectorAll('.btn-cart');
+
+// Add to Cart function with quantity
+function addToCart(item) {
+  // Check if item already exists
+  const existingItem = cart.find(cartItem => cartItem.name === item.name);
+
+  if (existingItem) {
+    existingItem.quantity += 1; 
+  } else {
+    item.quantity = 1;
+    cart.push(item);
+  }
+
+  // Update cart count (sum of all quantities)
+  cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  renderCart();
+}
+
+
+// Render Cart Items with quantity
+function renderCart() {
+  cartItemsList.innerHTML = '';
+
+  cart.forEach((item, index) => {
+    const li = document.createElement('li');
+    li.classList.add('cart-item');
+    if (editMode) li.classList.add('edit-mode');
+
+    li.innerHTML = `
+      <input type="checkbox" class="cart-select">
+      <img src="${item.img}" alt="${item.name}">
+      
+      <div class="cart-item-details">
+        <h4>${item.name}</h4>
+        <span>₱${item.price}</span>
+
+        <div class="qty-controls">
+          <button class="qty-minus" data-index="${index}">−</button>
+          <span class="qty-number">${item.quantity}</span>
+          <button class="qty-plus" data-index="${index}">+</button>
+        </div>
+
+        <div class="line-total">₱${(item.price * item.quantity).toFixed(2)}</div>
+      </div>
+    `;
+
+    cartItemsList.appendChild(li);
+  });
+
+  addQuantityButtonsEvent();
+  updateTotal();
+}
+
+function addQuantityButtonsEvent() {
+  const plusButtons = document.querySelectorAll('.qty-plus');
+  const minusButtons = document.querySelectorAll('.qty-minus');
+
+  // Increase quantity
+  plusButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const index = btn.dataset.index;
+      cart[index].quantity += 1;
+      renderCart();
+      cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+    });
+  });
+
+  // Decrease quantity
+  minusButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const index = btn.dataset.index;
+
+      if (cart[index].quantity > 1) {
+        cart[index].quantity -= 1;
+      } else {
+        // If quantity becomes zero, remove item
+        cart.splice(index, 1);
+      }
+
+      renderCart();
+      cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+    });
+  });
+}
+
+
+
+// Update Total Price
+function updateTotal() {
+  let total = 0;
+  cart.forEach(item => total += item.price * item.quantity);
+
+  document.getElementById('cart-total').textContent = total.toFixed(2);
+}
+
+
+
+// Add to Cart button
+addCartButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const menuItem = button.closest('.menu-item');
+    const itemName = menuItem.querySelector('h3').textContent;
+    const itemPrice = menuItem.querySelector('.price-actions span').textContent.replace(/[₱, ]/g, '').split('<')[0];
+    const itemImg = menuItem.querySelector('img').src;
+
+    addToCart({
+      name: itemName,
+      price: parseFloat(itemPrice),
+      img: itemImg
+    });
+    const alertDiv = document.createElement('div');
+alertDiv.className = 'cart-alert';
+alertDiv.textContent = `${itemName} added to cart!`;
+document.body.appendChild(alertDiv);
+
+// Fade out after 2 seconds
+setTimeout(() => {
+  alertDiv.style.opacity = '0';
+  setTimeout(() => alertDiv.remove(), 500); // remove after fade
+}, 2000);
+  });
+});
+
+// Toggle cart modal
+allCartBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    cartModal.style.display = cartModal.style.display === 'none' ? 'block' : 'none';
+  });
+});
+
+// Close cart modal
+btnCloseCart.addEventListener('click', () => {
+  cartModal.style.display = 'none';
+});
+
+// Edit mode toggle
+btnEditCart.addEventListener('click', () => {
+  editMode = !editMode;
+  btnEditCart.textContent = editMode ? 'Done' : 'Edit';
+  btnRemoveCart.style.display = editMode ? 'inline-block' : 'none';
+  renderCart();
+});
+
+// Remove selected items
+btnRemoveCart.addEventListener('click', () => {
+  const checkboxes = cartItemsList.querySelectorAll('input.cart-select');
+  for (let i = checkboxes.length - 1; i >= 0; i--) {
+    if (checkboxes[i].checked) {
+      cart.splice(i, 1);
+    }
+  }
+  cartCount.textContent = cart.length;
+  renderCart();
+});
+
+// Checkout
+btnCheckout.addEventListener('click', () => {
+  alert(`Checkout total: ₱${document.getElementById('cart-total').textContent}`);
+});
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
